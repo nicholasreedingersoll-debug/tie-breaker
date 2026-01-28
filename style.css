@@ -553,3 +553,216 @@ body {
     text-shadow: 0 0 15px rgba(78, 205, 196, 0.5);
     letter-spacing: 2px;
 }
+
+/* Hidden Slot Machine Link */
+.hidden-slot-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.hidden-slot-link:hover {
+    transform: scale(1.05);
+}
+
+.hidden-slot-link:hover h3 {
+    color: #FFD700;
+    text-shadow: 
+        0 0 15px rgba(255, 215, 0, 0.8),
+        0 0 30px rgba(255, 215, 0, 0.5);
+    animation: secret-glow 1s ease-in-out;
+}
+
+@keyframes secret-glow {
+    0%, 100% { 
+        text-shadow: 0 0 15px rgba(78, 205, 196, 0.5);
+    }
+    50% { 
+        text-shadow: 
+            0 0 25px rgba(255, 215, 0, 1),
+            0 0 40px rgba(255, 215, 0, 0.8),
+            0 0 55px rgba(255, 215, 0, 0.6);
+    }
+}
+
+/* Slot Machine Styles */
+.slot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.slot-machine {
+    background: linear-gradient(145deg, #2a5a3d, #1a3d2a);
+    border: 5px solid #FFD700;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.6),
+        inset 0 2px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.slot-machine::before {
+    content: '🎰';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    background: linear-gradient(145deg, #2a5a3d, #1a3d2a);
+    padding: 5px 15px;
+    border: 3px solid #FFD700;
+    border-radius: 15px;
+}
+
+.slot-display {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.slot-reel {
+    width: 100px;
+    height: 120px;
+    background: linear-gradient(145deg, #1a1a1a, #333333);
+    border: 4px solid #FFD700;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        inset 0 5px 10px rgba(0, 0, 0, 0.5),
+        0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+.slot-reel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        180deg, 
+        rgba(255, 255, 255, 0.1) 0%, 
+        transparent 50%, 
+        rgba(0, 0, 0, 0.1) 100%
+    );
+    pointer-events: none;
+}
+
+.slot-symbol {
+    font-size: 3.5rem;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
+    transition: transform 0.6s ease;
+}
+
+.slot-controls {
+    text-align: center;
+}
+
+.credits-display {
+    background: linear-gradient(45deg, #1a1a1a, #333333);
+    border: 3px solid #4ECDC4;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.credits-label {
+    color: #4ECDC4;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+.credits-value {
+    color: #FFD700;
+    font-weight: 900;
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.slot-spin-btn {
+    background: linear-gradient(45deg, #FF6B6B, #FFD700, #4ECDC4);
+    background-size: 300% 300%;
+    border: 4px solid #FFD700;
+    color: white;
+    padding: 20px 40px;
+    font-size: 1.4rem;
+    font-weight: 900;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Orbitron', monospace;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 10px 25px rgba(255, 215, 0, 0.4),
+        0 0 30px rgba(255, 215, 0, 0.2);
+    margin-bottom: 25px;
+    animation: rainbow-bg 3s ease infinite;
+}
+
+@keyframes rainbow-bg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.slot-spin-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 
+        0 15px 35px rgba(255, 215, 0, 0.6),
+        0 0 50px rgba(255, 215, 0, 0.4);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 1);
+    animation-duration: 1s;
+}
+
+.payout-info {
+    background: rgba(42, 90, 61, 0.3);
+    border: 2px solid #4ECDC4;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.payout-text {
+    color: #4ECDC4;
+    font-size: 0.9rem;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+.slot-message {
+    text-align: center;
+}
+
+.slot-message .result-text {
+    font-size: 1.2rem;
+    color: #FFD700;
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+/* Spinning Animation for Later JavaScript Use */
+.spinning {
+    animation: slot-spin 2s ease-out;
+}
+
+@keyframes slot-spin {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-50px); }
+    50% { transform: translateY(-100px); }
+    75% { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}
