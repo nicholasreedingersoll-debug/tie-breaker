@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin Wheel - Tie Breaker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="casino-background">
+        <header class="game-header">
+            <h1 class="game-page-title">SPIN WHEEL</h1>
+            <p class="game-subtitle">Fortune Favors the Bold</p>
+        </header>
+
+        <main class="game-arena">
+            <div class="wheel-container">
+                <div class="wheel-display">
+                    <div class="wheel-pointer">▼</div>
+                    <div class="fortune-wheel">
+                        <div class="wheel-section section-1">Option 1</div>
+                        <div class="wheel-section section-2">Option 2</div>
+                        <div class="wheel-section section-3">Option 3</div>
+                        <div class="wheel-section section-4">Option 4</div>
+                        <div class="wheel-section section-5">Option 5</div>
+                        <div class="wheel-section section-6">Option 6</div>
+                    </div>
+                </div>
+                
+                <div class="wheel-controls">
+                    <div class="options-input">
+                        <label class="input-label">Customize Your Options:</label>
+                        <div class="option-inputs">
+                            <input type="text" placeholder="Option 1" class="option-field">
+                            <input type="text" placeholder="Option 2" class="option-field">
+                            <input type="text" placeholder="Option 3" class="option-field">
+                            <input type="text" placeholder="Option 4" class="option-field">
+                        </div>
+                        <button class="add-option-btn">+ ADD OPTION</button>
+                    </div>
+                    
+                    <button class="mega-spin-btn">SPIN WHEEL</button>
+                    <p class="result-text">Customize and spin to decide!</p>
+                </div>
+            </div>
+
+            <div class="game-stats">
+                <div class="stat-card">
+                    <h3>Last Spin</h3>
+                    <p class="stat-value">-</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Lucky Option</h3>
+                    <p class="stat-value">None</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Spins</h3>
+                    <p class="stat-value">0</p>
+                </div>
+            </div>
+        </main>
+
+      <footer class="game-footer">
+        <a href="index.html" class="lobby-btn">← BACK TO LOBBY</a>
+        <h3>Trust Your Luck</h3>
+      </footer>
+
+    </div>
+</body>
+</html>

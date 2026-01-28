@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll - Tie Breaker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="casino-background">
+        <header class="game-header">
+            <h1 class="game-page-title">DICE ROLL</h1>
+            <p class="game-subtitle">Roll the Dice - Feel the Rush</p>
+        </header>
+
+        <main class="game-arena">
+            <div class="dice-container">
+                <div class="dice-display">
+                    <div class="dice-cube">
+                        <div class="dice-face">?</div>
+                    </div>
+                </div>
+                
+                <div class="dice-controls">
+                    <div class="slider-container">
+                        <label class="slider-label">Dice Sides: <span class="sides-count">6</span></label>
+                        <input type="range" class="dice-slider" min="3" max="30" value="6">
+                        <div class="slider-range">
+                            <span>3</span>
+                            <span>30</span>
+                        </div>
+                    </div>
+                    
+                    <button class="mega-roll-btn">ROLL DICE</button>
+                    <p class="result-text">Choose your sides and roll!</p>
+                </div>
+            </div>
+
+            <div class="game-stats">
+                <div class="stat-card">
+                    <h3>Last Roll</h3>
+                    <p class="stat-value">-</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Highest Roll</h3>
+                    <p class="stat-value">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Rolls</h3>
+                    <p class="stat-value">0</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="game-footer">
+    <a href="index.html" class="lobby-btn">← BACK TO LOBBY</a>
+    <h3>Trust Your Luck</h3>
+</footer>
+
+
+</body>
+</html>
